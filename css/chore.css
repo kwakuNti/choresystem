@@ -1,0 +1,470 @@
+*{
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    margin: 0px;
+    background-color: #f4f4f4;
+}
+
+#choreModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form inside the modal */
+.create-chore {
+    margin-top: 20px;
+}
+
+.create-chore h2 {
+    margin-bottom: 10px;
+}
+
+.create-chore label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.create-chore input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-chore button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.create-chore button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.chore-table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: -10px;
+}
+.chore-table td {
+    width: 90%;
+}
+.chore-table th, .chore-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.chore-table th {
+    background-color: #f2f2f2;
+}
+
+.chore-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.chore-table tr:hover {
+    background-color: whitesmoke;
+}
+
+.chore-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.dashboard .chorelist{
+    width: 70%;
+    height: 10%;
+    padding: 1px;    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -30px;
+}
+
+.dashboard .chorelist .material-symbols-outlined{
+    font-size: 50px;
+    padding: 10px;
+}
+
+.c{
+    margin-bottom: 0;
+}
+#add {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+#dashboard{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  .user-admin{
+    font-size: 50px;
+}
+.active-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+#people{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#people:hover{
+    transform: scale(1.75);
+}
+#add:hover{
+    transform: scale(1.75);
+}
+
+#dashboard:hover {
+    transform: scale(1.75);
+}
+.dashboard .chorelist h1{
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+.dashboard .main-text{
+    font-size: 40px;
+}
+#timeline{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#timeline:hover {
+    transform: scale(1.75);
+}
+
+.dashboard {
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.dashboard .navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.dashboard .navigation img.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.dashboard .navigation img.user{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.dashboard .navigation div .material-symbols-outlined{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.assign-chore{
+    font-size: 20px;
+}
+
+.assign-chore label{
+    margin-bottom: 10px;
+}
+
+.new-chores section{
+    padding: 400px;
+    background-color: red;
+}
+#assignPersonChoreForm{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.dashboard .navigation div{
+    margin-top: 10px;
+}
+
+.dashboard .main .search form{
+    position: relative;
+}
+
+.dashboard .main .search{
+    margin-top: 40px;
+}
+
+
+.dashboard .main .search form input{
+    width: 400%;
+    font-size: 16px;
+    padding: 10px 10px 10px 60px;
+    border: 1px solid grey;
+    background-color: #f4f4f4;
+}
+
+.dashboard .main .search form span{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    background-color: #f4f4f4;
+}
+
+.dashboard .main .search notification{
+    margin-top: 20px;
+}
+
+.dashboard .main .search notification span:nth-child(1){
+    margin-right: 15px;
+    position: relative;
+}
+.dashboard .main .search .notification span:nth-child(1)::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: sandybrown;
+    position: absolute;
+    border-radius: 50%;
+    top: 5px;
+}
+
+.dashboard .main .title{
+    margin-bottom: 30px;
+}
+
+.dashboard .main .title h1{
+    font-size: 35px;
+    line-height: 0px;
+}
+
+.dashboard .main .title{
+    margin-top: 40px;
+}
+
+.dashboard .main .title label{
+    margin-right: 15px;
+    color: grey;
+    font-size: 16px;
+}
+
+.dashboard .main .title select{
+    border: none;
+    font-size: 16px;
+    background-color: #f4f4f4;
+}
+
+.dashboard .main .chore_list .chore h2{
+    font-size: 20px;
+    line-height: 0;
+}
+
+.dashboard .main .chore_list .chore p{
+    color: grey;
+}
+
+.dashboard .main .chore_list .chore ul{
+    list-style: none;
+    position: relative;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.dashboard .main .chore_list .chore ul li{
+    position: relative;
+    color: grey;
+    margin-left: 15px;
+}
+
+.dashboard .main .chore_list .chore ul li::before{
+    content:"\268A";
+    position: absolute;
+    left: -15px;
+    top: -1px;
+}
+
+.dashboard .main .chore_list .chore .meta img{
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #f4f4f4;
+}
+
+.dashboard .main .chore_list .chore .meta img.stack{
+    margin-left:-20px
+}
+
+.dashboard .main .chore_list .chore .meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.dashboard .main .chore_list .chore {
+    padding:20px 20px 20px 60px;
+    background-color: #f4f4f4;
+    box-shadow: 1px 1px 40px white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.dashboard .main .chore_list .category {
+    width: 30px;
+    height: 50px;
+    background-color: rebeccapurple;
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    left: 0;
+}
+
+
+
+@media only screen and (min-width: 768px){
+    /* Dashboard Search */
+    .dashboard .main .search{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        width: 90%;
+    }
+
+    .dashboard .main .search form{
+        margin-top: 10px;
+    }
+
+    section.secondary{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        background-color: #f4f4f4;
+        padding-top: 70px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .dashboard .navigation,
+    .dashboard .navigation div span,
+    section.secondary{
+        display: block;
+    }
+    .dashboard .navigation{
+        width: 50px;
+        position: fixed;
+        z-index: 10;
+    }
+    section.main{
+        width: 60%;
+        margin-left: 90px;
+        margin-right: 20px;
+    }
+    section.secondary{
+        width: 27%;
+        padding-top: 2px;
+        position: fixed;
+        top: 11%;
+        right: 0px;
+        background-color: transparent;
+    }
+    section.secondary .chart,
+    section.secondary .recent_chores{
+        width: 100%;
+        border-radius: 10px;
+        height: 20%;
+    }
+    .dashboard .navigation div{
+        margin-top: 5vh;
+        margin-bottom: 19vh;
+    }
+    .dashboard .navigation div span{
+        margin-top: 5vh;
+    }
+}
+
+@media only screen and (min-width: 1111px){
+    section.main .chore_list .chore{
+        width: 32%;
+    }
+    section.main{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
