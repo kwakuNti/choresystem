@@ -1,24 +1,52 @@
 document.getElementById('dashboard').addEventListener('click', function() {
-  window.location.href = '../view/dash.php';
+  window.location.href = '../admin/dash.php';
 });
 
 document.getElementById('people').addEventListener('click', function() {
-  window.location.href = 'user.html';
+  window.location.href = '../view/user.php';
 });
 
-var modal = document.getElementById("choreModal");
+document.getElementById('logout').addEventListener('click', function() {
+  window.location.href = '../login/Logout.php';
+});
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-      modal.style.display = "none";
+// Function to handle clicks outside the modals
+window.onclick = function(event) {
+  var assignmentModal = document.getElementById("assignmentModal");
+  var choreModal = document.getElementById("choreModal");
+
+  // Close assignment modal if clicked outside
+  if (event.target == assignmentModal) {
+    assignmentModal.style.display = "none";
   }
-};
 
-function openModal() {
+  // Close chore modal if clicked outside
+  if (event.target == choreModal) {
+    choreModal.style.display = "none";
+  }
+}
+
+// Function to open assignment modal
+function openAssignmentModal() {
+  var modal = document.getElementById("assignmentModal");
   modal.style.display = "block";
 }
 
+// Function to close assignment modal
+function closeAssignmentModal() {
+  var modal = document.getElementById("assignmentModal");
+  modal.style.display = "none";
+}
+
+// Function to open chore modal
+function openModal() {
+  var modal = document.getElementById("choreModal");
+  modal.style.display = "block";
+}
+
+// Function to close chore modal
 function closeModal() {
+  var modal = document.getElementById("choreModal");
   modal.style.display = "none";
 }
 

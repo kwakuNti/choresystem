@@ -2,8 +2,7 @@
 // Include database connection
 include '../settings/connection.php';
 
-// SQL query to select users
-$sql = "SELECT * FROM People WHERE rid = 3"; // Assuming role_id is the column representing roles
+$sql = "SELECT * FROM People WHERE rid = 3";
 
 // Execute the query
 $result = mysqli_query($conn, $sql);
@@ -21,6 +20,5 @@ if ($result) {
     }
     echo '</select>';
 } else {
-    // If query failed, display error
     echo "Error: " . mysqli_error($conn);
 }

@@ -15,8 +15,8 @@
             </div>
             <h1 style="color: #333;"> CHORE MANANGEMENT SYSTEM </h1>
             <nav>
-                <a href="Register.html">Sign Up</a>
-                <a href="Login.html">Log In</a>
+                <a href="../login/register_view">Sign Up</a>
+                <a href="../login/login.php">Log In</a>
                 <a href="#">Settings</a>
             </nav>
         </div>

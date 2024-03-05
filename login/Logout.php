@@ -12,7 +12,7 @@
         <div class="form-box">
             <div class="form-text">
                 <h1> Logout</h1>
-                <p>Are you sure you want to log out ?<span><a href="../view/dash.php">Back to Dashboard</a> </span></p>
+                <p>Are you sure you want to log out ?<span><a href="../admin/dash.php">Back to Dashboard</a> </span></p>
             </div>
             <form id="logoutForm" action="../login/logout_view.php" method="post">
                 <button type="submit" class="submit-button" >Log Out</button>

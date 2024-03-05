@@ -85,7 +85,7 @@ ChoreFilter.addEventListener('input', (e) =>{
 
   
   document.getElementById('dashboard').addEventListener('click', function() {
-    window.location.href = 'dash.html';
+    window.location.href = '../admin/dash.php';
   });
   
   
@@ -102,6 +102,6 @@ ChoreFilter.addEventListener('input', (e) =>{
   });
 
   document.getElementById('add').addEventListener('click', function() {
-    window.location.href = '../admin/assign_a_chore.php';
+    window.location.href = '../admin/assign_a_chore_view.php';
   });
   

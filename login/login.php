@@ -20,7 +20,7 @@
             
             <label for="password">Password</label>
                 <div class="password-container">
-                <input type="password" id="password" name="password" class="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Minimum 8 characters, at least one letter and one number">
+                <input type="password" id="password" name="password" class="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[,#\$!@%^&*()\/?])[A-Za-z\d,#\$!@%^&*()\/?]{8,}$" title="Minimum 8 characters, at least one letter and one number">
                 
                 </div>
                 <div class="forgot-password">

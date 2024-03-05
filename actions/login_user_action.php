@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $user['passwd'])) {
             $_SESSION['user_id'] = $user['pid'];
             $_SESSION['role_id'] = $user['rid'];
-            header("Location: ../view/dash.php");
+            header("Location: ../admin/dash.php");
             exit;
         } else {
             // Incorrect password

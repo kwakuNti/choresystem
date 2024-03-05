@@ -1,5 +1,7 @@
 <?php
 include("../functions/chore_fxn.php");
+require_once('../settings/core.php');
+checkUserRole(1);
 checkLogin();
 ?>
 <!DOCTYPE html>
@@ -12,6 +14,10 @@ checkLogin();
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="../css/chore.css">
+  <link rel="stylesheet" href="../css/assign.css">
+
+
+
 </head>
 <body>
   <div class="dashboard">
@@ -21,8 +27,10 @@ checkLogin();
       <div>
         <span id="dashboard" class="material-symbols-outlined">dashboard</span>
         <span id="people" class="material-symbols-outlined">groups</span>
+        <span  id="addx" class="material-symbols-outlined" title="Assign Chore" onclick="openAssignmentModal()">Assignment</span>
         <span id="add" class="material-symbols-outlined" onclick="openModal()">add</span>
         <span class="material-symbols-outlined">settings</span>
+        <span  id="logout" class="material-symbols-outlined" title="Log out">logout</span>
       </div>
       <img src="../images/p2.jpg" alt="user" class="user">
     </section>
@@ -48,6 +56,19 @@ checkLogin();
 
 </div>
       </section>
+      <div id="assignmentModal" class="modal">
+      <div class="modal-content">
+      <span class="close" onclick="closeAssignmentModal()">&times;</span>
+      <h2>Assign Chore</h2>
+      <form id="assignChoreForm" action="../actions/assign_a_chore_action.php" method="post">
+    <?php include('../functions/select_user_fxn.php'); ?>
+    <?php include('../functions/select_chore_fxn.php'); ?>
+    <label for="dueDate">Due Date:</label>
+    <input type="date" id="dueDate" name="dueDate" class="due-date">
+    <input type="submit" value="Assign Chore" class="assign-button">
+    </form>
+    </div>
+  </div>
       <div id="choreModal" class="modal">
         <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>

@@ -1,6 +1,7 @@
 <?php
 require_once('../settings/core.php');
 checkLogin();
+checkUserRole(1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,6 @@ checkLogin();
     <label for="dueDate">Due Date:</label>
     <input type="date" id="dueDate" name="dueDate" class="due-date">
     <input type="submit" value="Assign Chore" class="assign-button">
-    <input type="submit" value="Assign Chore">
 </form>
 
 </body>

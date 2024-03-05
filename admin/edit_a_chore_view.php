@@ -2,6 +2,7 @@
 include("../settings/connection.php");
 include("../actions/get_a_chore.php");
 checkLogin();
+checkUserRole(1);
 
 if (isset($_GET['id'])) {
     $choreId = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);

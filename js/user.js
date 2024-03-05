@@ -11,6 +11,6 @@ function switchUser() {
   }
 
   document.getElementById('dashboard').addEventListener('click', function() {
-    window.location.href = 'dash.html';
+    window.location.href = '../admin/dash.php';
   });
-  
+ 

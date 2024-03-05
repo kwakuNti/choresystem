@@ -1,5 +1,5 @@
 function redirectToWebpage() {
-    window.location.href = 'Login.html';
+    window.location.href = '../login/login.php';
 }
 
 var button = document.getElementById('redirectButton');

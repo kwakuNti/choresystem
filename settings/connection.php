@@ -2,7 +2,7 @@
 $db_server = "localhost";
 $db_user = "root";
 $db_password = "";
-$db_name = "choresystemdb";
+$db_name = "chores_mgt";
 
 
 

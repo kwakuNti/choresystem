@@ -1,18 +1,28 @@
 <?php
-// Perform necessary processing to add chore assignment to the database
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Include database connection
-    require_once('db_connection.php');
+require_once('../settings/core.php');
+include('../settings/connection.php');
+checkLogin();
 
-    // Retrieve user and chore information from the form
-    $user = $_POST['user'];
-    $chore = $_POST['chore'];
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Extract and sanitize input data
+    $userId = $_POST['user'];
+    $choreId = $_POST['chore'];
+    $dueDate = $_POST['dueDate'];
+    $statusId = 1;
+    $randomDate = date('Y-m-d', strtotime('-1 year'));
 
-    $sql = "INSERT INTO chore_assignment (user_id, chore_id) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $user, $chore);
+    // Insert the new chore assignment into the database
+    $query = "INSERT INTO Assignment (cid, sid, date_assign, date_due, last_updated, date_completed, img, who_assigned)
+            VALUES (?, ?, NOW(), ?, NOW(), ?, '', ?)";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("iissi", $choreId, $statusId, $dueDate,$randomDate, $_SESSION['user_id']);
     $stmt->execute();
+    $stmt->close();
 
-    header("Location: ../assign_chore_view.php");
+    header("Location: ../admin/assign_a_chore_view.php?msg=Assigned Sucessfully");
+    exit;
+} else {
+    header("Location: ../admin/assign_a_chore.php?msg=Sorry could not assign");
     exit;
 }

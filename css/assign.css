@@ -13,3 +13,26 @@ body h2{
 #assignChoreForm label{
     text-align: left;
 }
+#assignChoreForm .due-date{
+    display: block;
+    width: 100%;
+}
+
+#assignChoreForm .assign-button{
+    margin-top: 10px;
+}
+
+.chore-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.chore-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
